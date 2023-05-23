@@ -2,7 +2,7 @@ package com.example.todo
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyListState
-import androidx.compose.material.*
+import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -38,13 +38,13 @@ internal fun Dialog(
     androidx.compose.ui.window.Dialog(
         onDismissRequest = onCloseRequest,
     ) {
-        Card(elevation = 8.dp) {
+        Card(elevation = CardDefaults.cardElevation(8.dp)) {
             Column(
                 modifier = Modifier
                     .padding(8.dp)
                     .height(IntrinsicSize.Min)
             ) {
-                ProvideTextStyle(MaterialTheme.typography.subtitle1) {
+                ProvideTextStyle(MaterialTheme.typography.titleMedium) {
                     Text(text = title)
                 }
 
